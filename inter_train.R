@@ -374,7 +374,7 @@ df_new <- bind_rows(df_one,
 
 # or in a pipe
 
-df_new <- df_new |>
+df_new <- df_one |>
   bind_rows(df_two)
 
 # <<< Over to you >>>>
@@ -604,7 +604,7 @@ data$attendances[1] <- 25000
 # now rerun the above case statement
 
 # Lets also add some null data 
-data$attendances[1] <- NA
+data$attendances[2] <- NA
 
 # again the case statement 'works' but is incorrect
 
@@ -682,7 +682,7 @@ if (a == 5)  {
   c <- a
   print('c has been created as a variable and is now a')
 } else {
-  print('a is ', a)
+  print(paste0('a is ', a))
   print('c does not exist')
 }
 
