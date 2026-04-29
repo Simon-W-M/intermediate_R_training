@@ -1902,7 +1902,7 @@ plot_list <- list ()
 vector <- c('RQM', 'RJ1', 'RDD')
 
 for (i in vector) {
-  plot_list[i] <- plot_site(i)
+  plot_list[[i]] <- plot_site(i)
 }
 
 # lets call some of our plots from the list
