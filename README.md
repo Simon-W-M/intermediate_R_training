@@ -1,80 +1,63 @@
 # Intermediate R Training
-## Developed by NHSE in colloboration with NHSR community
 
-### About the Project
+This is a follow on course for the Introduction to R and R Studio course or for
+people who have some familiarity and comfort in using R.
 
-[![status: experimental](https://github.com/GIScience/badges/raw/master/status/experimental.svg)](https://github.com/GIScience/badges#experimental)
+## Course preparation
 
-This repository holds code training course.
-
-_**Note:** Only public or fake data are shared in this repository._
-
-### Project Stucture
-
-- The main code is found in the root of the repository (see Usage below for more information)
-
-### Built With
-
-[R Studio](RStudio Team (2020). RStudio: Integrated Development for R. RStudio, PBC, Boston, MA URL http://www.rstudio.com/.)  
-[R Statistical Software](  R Core Team (2018). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL https://www.R-project.org/.)
-
-
-library(tidyverse)
-library(janitor)
-library(zoo)
-library(NHSRplotthedots)
-library(NHSRdatasets)
-
-### Getting Started
-
-#### Installation
-
-To get a local copy up and running follow these simple steps.
-
-To clone the repo:
-
-### Usage
-
-Script is all self contained and pulls data from the library NHSRdatasets
-
-#### Outputs
-No outputs are produced beyond consol results
-
-#### Datasets
-Psuedo data from the library NHSRdatasets
-
-### Roadmap
-Additional sections around Tables and Charts to be considered.
-Not sure if script along is best method or if more traditional slide method could be used.  Would consider converting to quarto slides.
+Data for the course is from the [{NHSRdatasets}](https://github.com/nhs-r-community/NHSRdatasets) 
+package available through CRAN.
+Set up information for the course can be found in the [NHS-R Way book](https://nhsrway.nhsrcommunity.com/training.html#intermediate-r).
 
 ### Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Please see our 
+[guidance on how to contribute](https://tools.nhsrcommunity.com/contribution.html).
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+This project is released with a Contributor [Code of Conduct](./CODE_OF_CONDUCT.md). 
+By contributing to this project, you agree to abide by its terms.
 
-_See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidance._
+The simplest way to contribute is to raise an issue detailing the feature or 
+functionality you would like to see added, or any unexpected behaviour or bugs 
+you have experienced.
 
-### License
+## If you fork this repository
 
-Unless stated otherwise, the codebase is released under [the MIT Licence][mit].
-This covers both the codebase and any sample code in the documentation.
+Note that because this is a forked project the following commands in git in the
+Terminal are needed to reset the `origin` to NHS-R Community.
+This is needed in order to create new branches to PR into `main` which is good
+practice:
 
-_See [LICENSE](./LICENSE) for more information._
+```
+git remote remove upstream
+git remote add upstream https://github.com/Simon-W-M/intermediate_R_training.git
+git remote remove origin
+git remote add origin https://github.com/nhs-r-community/intermediate_R_training.git
+```
+The command:
 
-The documentation is [© Crown copyright][copyright] and available under the terms
-of the [Open Government 3.0][ogl] licence.
+```
+git remote -v
+```
 
-[mit]: LICENCE
-[copyright]: http://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/
-[ogl]: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+will show the links and should say:
 
-### Contact
-Simon Wellesley-Miller
+```
+origin  https://github.com/nhs-r-community/intermediate_R_training.git (fetch)
+origin  https://github.com/nhs-r-community/intermediate_R_training.git (push)
+upstream        https://github.com/Simon-W-M/intermediate_R_training.git (fetch)
+upstream        https://github.com/Simon-W-M/intermediate_R_training.git (push)
+```
 
-To find out more  get in touch at [Simon.Wellesley-Miller](mailto:simon.wellesley-miller@nhs.net).
+Hint: copying text into the Terminal cannot use the short cut keys of Ctrl+V but
+right click on the mouse.
+
+Also note that the PR will work from the {usethis} package but will be to the 
+upstream repository in GitHub and will need to be reset to 
+`nhs-r-community/intermediate_R_training.git`.
+
+## Special note of thanks
+
+To [Simon.Wellesley-Miller](mailto:simon.wellesley-miller@nhs.net), NHS England,
+for developing this course on behalf of NHS-R Community.
 
